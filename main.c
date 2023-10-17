@@ -45,9 +45,8 @@ int main(int argc, char* argv[]) {
 			return 0;
 		}
 		if (setFlags[2] == 1) {
-			printf("got here");
 			cp = (char*)calloc(SIZE, sizeof(char));
-			fd = open(argv[1], O_RDONLY);
+			fd = open(argv[argc-1], O_RDONLY);
 			if (fd < 0) {
 				perror("Error opening file");
 				exit(1);
